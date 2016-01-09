@@ -1,0 +1,13 @@
+package com.org.test;
+
+import com.org.util.StringBufferUtil;
+
+public class TestStringBufferUtil {
+
+	public static void main(String[] args) {
+		
+		StringBufferUtil bufferUtil=new StringBufferUtil();
+		bufferUtil.append("Hi");
+		bufferUtil.append("hallow");
+	}
+}

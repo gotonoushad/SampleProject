@@ -1,0 +1,31 @@
+package com.org.util;
+
+import java.util.Vector;
+
+public class StringBufferUtil {
+
+	private Vector<String> content; // StringBufferContennt , which already synchronized, so no need of sync
+	private char[] contentMSG;
+
+	public StringBufferUtil() {
+		
+		content=new Vector<String>();
+	}
+	public StringBufferUtil(String content) {
+		this();
+		this.content.add(content);
+	}
+	
+	public String append(String content){
+		
+		this.content.add(content);
+		return toString();
+	}
+	
+	@Override
+	public String toString(){
+		if(content==null)
+			return "";
+		return content.toString();
+	}
+}

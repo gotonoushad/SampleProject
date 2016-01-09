@@ -1,0 +1,31 @@
+package com.org.test;
+
+import java.util.Vector;
+
+public class StringBufferImpl {
+
+	private Vector<String> content; // StringBufferContennt , which already synchronized, so no need of sync
+
+	public StringBufferImpl() {
+		
+		content=new Vector<String>();
+	}
+	public StringBufferImpl(String content) {
+		this();
+		this.content.add(content);
+	}
+	
+	public String append(String content){
+		
+		this.content.add(content);
+		return toString();
+	}
+	
+	@Override
+	public String toString(){
+		
+		if(content!=null)
+			return "";
+		return content.toString();
+	}
+}

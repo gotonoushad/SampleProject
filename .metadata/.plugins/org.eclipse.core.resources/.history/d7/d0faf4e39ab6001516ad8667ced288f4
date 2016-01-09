@@ -1,0 +1,22 @@
+package com.org.test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StringBufferImpl {
+
+	private List<String> content=new ArrayList<String>();
+
+	public StringBufferImpl() {
+		
+	}
+	public StringBufferImpl(String content) {
+		
+		this.content.add(content);
+	}
+	
+	public String append(String content){
+		
+		this.content.add(content);
+	}
+}

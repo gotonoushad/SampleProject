@@ -1,0 +1,46 @@
+package com.org.util;
+
+import java.util.Vector;
+
+public class StringBufferUtil {
+
+	private Vector<String> content; // StringBufferContennt , which already synchronized, so no need of sync
+
+	public StringBufferUtil() {
+		
+		content=new Vector<String>();
+	}
+	public StringBufferUtil(String content) {
+		this();
+		this.content.add(content);
+	}
+	
+	public boolean append(String content){
+		
+		if(content==null)
+			return false;
+		this.content.add(content);
+		return true;
+	}
+	
+	@Override
+	public String toString(){
+		
+		if(content==null)
+			return "";
+		
+		return content.toString();
+
+		int length=0;
+		for(int i=0;i<content.size();i++)
+			length+=content.get(i).length();
+		char[] msg=new char[length];
+		int j=0;
+		for(int i=0;i<content.size();i++){
+		
+			for(int p=0;p<content.get(i).length();p++,j++)
+				msg[j]=content.get(i).charAt(p);
+		}
+		return msg.toString();
+	}
+}

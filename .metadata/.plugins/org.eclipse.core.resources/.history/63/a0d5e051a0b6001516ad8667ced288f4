@@ -1,0 +1,15 @@
+package com.org.test;
+
+
+public class StringBufferUtilTest {
+
+	@Test
+	public void appendTest() {
+
+		StringBufferUtilTest bufferUtil = new StringBufferUtilTest();
+		bufferUtil.append("Hi");
+		bufferUtil.append("hallow");
+
+		Assert.assertEquals(bufferUtil, "Hihallow");
+	}
+}

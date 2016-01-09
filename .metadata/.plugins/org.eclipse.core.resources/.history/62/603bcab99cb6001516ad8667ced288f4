@@ -1,0 +1,19 @@
+package com.org.test;
+
+import com.org.util.StringBufferUtil;
+
+public class StringBufferImplTest {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	@Test
+	public void appendTest(){
+		
+		StringBufferUtil bufferUtil=new StringBufferUtil();
+		bufferUtil.append("Hi");
+		
+		System.out.println(bufferUtil);
+	}
+}

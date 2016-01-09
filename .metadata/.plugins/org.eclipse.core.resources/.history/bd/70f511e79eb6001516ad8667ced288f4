@@ -1,0 +1,28 @@
+package com.org.test;
+
+import junit.framework.Assert;
+
+import org.junit.Test;
+
+import com.org.util.StringBufferUtil;
+
+public class StringBufferImplTest {
+
+	public static void main(String[] args) {
+		
+		StringBufferImplTest bufferImplTest=new StringBufferImplTest();
+		bufferImplTest.appendTest();
+	}
+	
+	@Test
+	public void appendTest(){
+		
+		System.out.println("hi");
+		StringBufferUtil bufferUtil=new StringBufferUtil();
+		bufferUtil.append("Hi");
+		bufferUtil.append("hallow");
+		
+		Assert.assertEquals("", "");
+		System.out.println(bufferUtil);
+	}
+}

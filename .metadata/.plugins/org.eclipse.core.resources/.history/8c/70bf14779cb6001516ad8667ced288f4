@@ -1,0 +1,9 @@
+package com.org.test;
+
+public class StringBufferImplTest {
+
+	@Test
+	public void appendTest(){
+		
+	}
+}

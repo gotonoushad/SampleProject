@@ -1,0 +1,33 @@
+package com.org.test;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
+
+public class StringBufferImpl {
+
+	private Vector<String> content;
+
+	public StringBufferImpl() {
+		
+		content=new ArrayList<String>();
+	}
+	public StringBufferImpl(String content) {
+		this();
+		this.content.add(content);
+	}
+	
+	public String append(String content){
+		
+		this.content.add(content);
+		return toString();
+	}
+	
+	@Override
+	public String toString(){
+		
+		if(content!=null)
+			return "";
+		return content.toString();
+	}
+}
